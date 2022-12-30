@@ -36,10 +36,14 @@ const Card = (makale) => {
   yazarAdi.textContent = makale.yazarAdi;
 
   imgContainer.appendChild(img);
-  yazar.appendChild(yazarAdi);
   yazar.appendChild(imgContainer);
-  cardContainer.appendChild(yazar);
+  yazar.appendChild(yazarAdi);
   cardContainer.appendChild(anabaslik);
+  cardContainer.appendChild(yazar);
+
+  cardContainer.addEventListener("click", (event) => {
+    console.log(cardContainer.querySelector(".headline").textContent);
+  });
 
   return cardContainer;
 };
